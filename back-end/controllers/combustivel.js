@@ -11,6 +11,10 @@ controller.novo = function(req, res) {
    Combustivel.create(req.body).then(
       // Callback se ser certo
       function() {
+         // Gambiarra: evita que o status 201 seja
+         // interpretado como erro pelo front-end
+         res.send(''); 
+         
          // HTTP 201: Criado
          res.sendStatus(201).end();
       },

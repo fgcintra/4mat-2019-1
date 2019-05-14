@@ -13,6 +13,7 @@ import { CombustivelListComponent } from './combustivel/combustivel-list/combust
 import { HttpClientModule } from '@angular/common/http';
 import { ExcluirDlgComponent } from './ui/excluir-dlg/excluir-dlg.component';
 import { CombustivelFormComponent } from './combustivel/combustivel-form/combustivel-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CombustivelFormComponent } from './combustivel/combustivel-form/combust
     HttpClientModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   entryComponents: [
     ExcluirDlgComponent

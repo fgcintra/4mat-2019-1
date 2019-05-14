@@ -19,8 +19,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
    margin-right: 10px;
 }
 
+.separador20 {
+   margin-right: 20px;
+}
+
 .list-toolbar {
    margin-bottom: 20px;
    background: transparent;
    padding-left: 0 !important;
+}
+
+.mat-form-field {
+   width: 100%;
+}
+
+.form-toolbar {
+   background: transparent;
+   text-align: center;
 }
