@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
@@ -14,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExcluirDlgComponent } from './ui/excluir-dlg/excluir-dlg.component';
 import { CombustivelFormComponent } from './combustivel/combustivel-form/combustivel-form.component';
 import { FormsModule } from '@angular/forms';
+import { VeiculoListComponent } from './veiculo/veiculo-list/veiculo-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     RodapeComponent,
     CombustivelListComponent,
     ExcluirDlgComponent,
-    CombustivelFormComponent
+    CombustivelFormComponent,
+    VeiculoListComponent
   ],
   imports: [
     BrowserModule,
