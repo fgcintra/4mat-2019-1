@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { CombustivelListComponent } from './combustivel/combustivel-list/combustivel-list.component';
 import { CombustivelFormComponent } from './combustivel/combustivel-form/combustivel-form.component';
 import { VeiculoListComponent } from './veiculo/veiculo-list/veiculo-list.component';
+import { VeiculoFormComponent } from './veiculo/veiculo-form/veiculo-form.component';
+
 
 const routes: Routes = [
   {
@@ -20,7 +22,15 @@ const routes: Routes = [
   {
     path: 'veiculo',
     component: VeiculoListComponent
-  }
+  },
+  {
+    path: 'veiculo/novo',
+    component: VeiculoFormComponent
+  },
+  {
+    path: 'veiculo/:id',
+    component:  VeiculoFormComponent
+  },
 ];
 
 @NgModule({

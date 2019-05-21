@@ -54,7 +54,7 @@
         'symbol' -> coloca R$ antes do número
         '1.2' -> duas casas decimais
         'pt' -> usa as convenções de separador decimal (vírgula) do português
-      -->"
+      -->
       <td mat-cell class="align-right" *matCellDef="let veiculo"> 
         {{(veiculo.valor_compra * 1.2) | currency:'BRL':'symbol':'1.2':'pt'}} 
       </td>

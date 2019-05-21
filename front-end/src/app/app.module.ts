@@ -19,6 +19,7 @@ import { ExcluirDlgComponent } from './ui/excluir-dlg/excluir-dlg.component';
 import { CombustivelFormComponent } from './combustivel/combustivel-form/combustivel-form.component';
 import { FormsModule } from '@angular/forms';
 import { VeiculoListComponent } from './veiculo/veiculo-list/veiculo-list.component';
+import { VeiculoFormComponent } from './veiculo/veiculo-form/veiculo-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { VeiculoListComponent } from './veiculo/veiculo-list/veiculo-list.compon
     CombustivelListComponent,
     ExcluirDlgComponent,
     CombustivelFormComponent,
-    VeiculoListComponent
+    VeiculoListComponent,
+    VeiculoFormComponent
   ],
   imports: [
     BrowserModule,
