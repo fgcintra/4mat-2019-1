@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'veiculo/:id',
-    component:  VeiculoFormComponent
+    component: VeiculoFormComponent
   },
 ];
 

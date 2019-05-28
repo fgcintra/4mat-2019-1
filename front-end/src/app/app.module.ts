@@ -5,6 +5,16 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt);
 
+/**** Datas em português no MatDatepicker  ****/
+
+// É preciso instalar os seguintes pacotes:
+// yarn add @angular/material-moment-adapter moment
+
+import { MatMomentDateModule, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
+import { MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material/core';
+
+/**********************************************/
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
@@ -39,12 +49,20 @@ import { VeiculoFormComponent } from './veiculo/veiculo-form/veiculo-form.compon
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    /**** Datas em português no MatDatepicker  ****/
+    MatMomentDateModule
+    /**********************************************/
   ],
   entryComponents: [
     ExcluirDlgComponent
   ],
-  providers: [],
+  providers: [
+   /**** Datas em português no MatDatepicker  ****/
+   { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+   { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS}
+   /**********************************************/
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -55,7 +55,67 @@
         {{ combustivel.descricao }}
       </mat-option>
     </mat-select>
-  </mat-form-field>    
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Placa</mat-label>
+    <input matInput maxlength="8"
+      placeholder="Informe a placa no formato AAA-0000" 
+      required 
+      name="placa" 
+      [(ngModel)]="veiculo.placa" 
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Valor de compra</mat-label>
+    <mat-icon matPrefix>attach_money</mat-icon>
+    <input matInput type="number"
+      step="1"
+      placeholder="Informe o valor de compra do veículo" 
+      required 
+      name="valor_compra" 
+      [(ngModel)]="veiculo.valor_compra" 
+    />
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Data da compra</mat-label>
+    <input matInput 
+      [matDatepicker]="dataCompra" 
+      placeholder="Informe a data de compra" 
+      required 
+      name="data_compra"
+      [(ngModel)]="veiculo.data_compra"
+    >
+    <mat-datepicker-toggle matSuffix [for]="dataCompra">
+    </mat-datepicker-toggle>
+    <mat-datepicker #dataCompra></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Valor de venda</mat-label>
+    <mat-icon matPrefix>attach_money</mat-icon>
+    <input matInput type="number"
+      step="1"
+      placeholder="Informe o valor de venda do veículo" 
+      name="valor_venda" 
+      [(ngModel)]="veiculo.valor_venda" 
+    />
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Data da venda</mat-label>
+    <input matInput 
+      [matDatepicker]="dataVenda" 
+      placeholder="Informe a data de venda" 
+      name="data_venda"
+      [(ngModel)]="veiculo.data_venda"
+    >
+    <mat-datepicker-toggle matSuffix [for]="dataVenda">
+    </mat-datepicker-toggle>
+    <mat-datepicker #dataVenda></mat-datepicker>
+  </mat-form-field>
 
 </form>
 
