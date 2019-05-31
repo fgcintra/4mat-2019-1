@@ -230,3 +230,53 @@ const routes: Routes = [
 8. No arquivo `src\app\ui\menu-principal\menu-principal.component.html`, crie um item para acessar seu component de listagem, seguindo os exemplos já existentes nesse mesmo arquivo.
 
 9. Execute o comando `ng serve` no *front-end* e, em outro terminal, o comando `yarn start` no *back-end*. Você deve ser capaz de ver seus dados na listagem, caso os tenha cadastrado corretamente.
+
+## 11. Criando um componente de formulário simples
+
+1. Um componente de formulário simples fará par com um componente de listagem simples que você já criou. Portanto, **só gere componentes de formulário se você já tiver gerado o respectivo componente de listagem**.
+
+> **SUBSTITUA `nome-da-entidade` pelo nome da sua entidade no *back-end***. Fique atento às seguintes recomendações:
+> * Use sempre **letras minúsculas** no nome da entidade;
+> * Caso o nome da sua entidade tenha mais de uma palavra, mantenha-as todas em minúsculas e separe as partes com **hífen**.
+> * **Não se esqueça do `-form` no final do comando!**
+
+2. Escolhida a entidade, execute no terminal:
+
+<pre>
+ng generate component nome-da-entidade/nome-da-entidade<b>-form</b>
+</pre>
+
+O comando executado irá criar os seguintes arquivos:
+* <code>src/app/nome-da-entidade/nome-da-entidade-form/nome-da-entidade-form.component.<b>html</b></code>
+* <code>src/app/nome-da-entidade/nome-da-entidade-form/nome-da-entidade-form.component.<b>scss</b></code>
+* <code>src/app/nome-da-entidade/nome-da-entidade-form/nome-da-entidade-form.component.<b>ts</b></code>
+
+3. Em seguida, copie o código dos arquivos  `combustivel-form.component.html`, `combustivel-form.component.scss` e `combustivel-form.component.ts` do [repositório do professor](https://github.com/fgcintra/4mat-2019-1) e cole nos arquivo gerados, **de acordo com seus tipos**, substituindo o conteúdo. 
+
+4. Faça as adaptações e substituições necessárias para o nome de sua entidade, com cuidado para **preservar as letras maiúsculas e minúsculas** de acordo com o padrão do Angular.
+
+5. Você precisará trabalhar o arquivo `.html` do formulário de acordo com os atributos e tipos de atributos da sua própria entidade. No exemplo do `combustivel-form.component.html`, o atributo exemplificado é do tipo *string*, e, portanto, é utilizado um `<input matInput>` para capturá-lo. Se esse não for o seu caso, você encontrará mais exemplos de componentes de formulário para outros tipos de dados em `veiculo-form.component.html`.
+
+6. Abra o arquivo `src/app/app-routing.module`. No início do arquivo, importe o seu componente de formulário.
+
+```typescript
+import { NomeDaEntidadeFormComponent } from './nome-da-entidade/nome-da-entidade-form/nome-da-entidade-form.component';
+```
+
+7. Mais abaixo, no mesmo arquivo, acrescente a rota para o seu componente:
+
+```typescript
+const routes: Routes = [
+  // Pode haver outras rotas antes
+  {
+    path: 'nome-da-entidade/novo',
+    component: NomeDaEntidadeFormComponent
+  },
+  {
+    path: 'nome-da-entidade/:id',
+    component: NomeDaEntidadeFormComponent
+  }
+  // Pode haver outras rotas depois
+}
+```
+8. Execute o comando `ng serve` no *front-end* e, em outro terminal, o comando `yarn start` no *back-end*. A partir do componente de listagem, você deverá ser capaz de acesar o formulário pelo botão `Nova entidade` ou pelo botão de edição de cada uma das linhas da listagem.
