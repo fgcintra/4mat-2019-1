@@ -145,3 +145,28 @@ import { MaterialModule } from './material/material.module';
 export class AppModule { }
 ```
 **PRONTO**! Agora todos os componentes Angular Material já podem ser utilizados no projeto.
+
+# 8. Criando os *services*
+
+Os *services* são os responsáveis por fazer a comunicação entre a aplicação Angular e a API (*back-end*). Para criar um *service* do Angular, execute o comando exemplificado mais abaixo.
+
+> **SUBSTITUA `nome-da-entidade` pelo nome da sua entidade no *back-end***. Fique atento às seguintes recomendações:
+> * Use sempre **letras minúsculas** no nome da entidade;
+> * Caso o nome da sua entidade tenha mais de uma palavra, mantenha-as todas em minúsculas e separe as partes com **hífen**.
+
+No terminal:
+
+```bash
+ng generate service nome-da-entidade/nome-da-entidade
+```
+> **NOTA**: as palavras `generate` e `service` podem ser abreviadas pelas suas primeiras letras:
+> 
+> `ng g s nome-da-entidade/nome-da-entidade`
+
+
+
+Isso irá criar um arquivo chamado `nome-da-entidade.service.ts` na pasta `src\app\nome-da-entidade`. Isso ajuda muito na organização do código.
+
+Copie o código do *service* `combustivel.service.ts` do [repositório do professor](https://github.com/fgcintra/4mat-2019-1) e cole no arquivo gerado, substituindo o conteúdo. Faça as adaptações e substituições necessárias para o nome de sua entidade, com cuidado para **preservar as letras maiúsculas e minúsculas** de acordo com o padrão do Angular.
+
+É recomendável que você crie **TODOS** os *services* necessários agora no início, para que eles estejam disponíveis quando forem necessários.
